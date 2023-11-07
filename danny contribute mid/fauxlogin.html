@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>signup sheet</title>
+  <script src="verify.js"></script>
+  <link href="signupstyle.css" rel="stylesheet">
+</head>
+<body>
+<h1> Sign In</h1>
+
+<form action="login.php" method="post">
+  Username:<br>
+  <input type="text" name="Uname" id="a"><br>
+  Password:<br>
+  <input type="text" name="Pword" id="b"><br>
+
+
+  <!-- <button type="button" onclick="emailvalid()," >Verify</button>-->
+  <input type="button" onclick="emailvalid(),psswdvalid()" value="Verify">
+  <input type="submit" name="submit">
+  <button type="button" onclick="work()">Cancel</button>
+
+
+  <p id="one"></p>
+  <p id="new"></p>
+  <p id="two"></p>
+  <p id="new2"></p>
+</form>
+
+</body>
+</html>
+
+

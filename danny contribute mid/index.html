@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<script src = verify.js></script>
+		<link href="signupstyle.css" rel="stylesheet">
+		<title>Sign up</title>
+	</head>
+	<body>
+		<h1>Sign up with your details below</h1>
+		<div class="Center">
+			<form action="dataup.php" method = "post">
+				Username (enter email):<br>
+				<input type="text" value="" id="a" name="Uname"><br>
+				Password:<br>
+				<input type="text" value="" id="b" name="Pword"><br>
+				First Name:<br>
+				<input type="text" value="" id="c" name="Fname"><br>
+				Last Name:<br>
+				<input type="text" value="" id="d" name="Lname"><br>
+				College:<br>
+				<input type="text" value="" id="e" name="College"><br>
+				Major:<br>
+				<input type="text" value="" id="f" name="Major"><br>
+				<input type="submit"><br>
+			</form>
+
+			<p id="one"></p>
+			<p id="new"></p>
+			<p id="two"></p>
+                        <p id="new2"></p>
+			<p id="three"></p>
+                        <p id="new3"></p>
+			<p id="four"></p>
+                        <p id="new4"></p>
+			<p id="five"></p>
+                        <p id="six"></p>
+
+
+
+			<a href="fauxlogin.html">
+				<button>Go to login page</button>
+			</a>
+
+
+			<button name = "verify" onclick="emailvalid(),psswdvalid(),namevalid(),lastvalid(),Bollege(),Bajor()">verify</button>
+			<button name= "cancel" onclick="empty()">cancel</button>
+
+
+
+		</div>
+
+
+
+
+
+
+	</body>
+</html> 
