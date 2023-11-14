@@ -30,7 +30,7 @@ $result3 = mysqli_fetch_assoc($query3);
 $resultstring3 = $result3['userlastname'];
 
 
-$sql4="SELECT * FROM `Todo` WHERE `userfirstname` ='$resultstring2' AND `userlastname`='$resultstring3' ORDER BY `duedateandtime` ASC";
+$sql4="SELECT * FROM `pokemon` ORDER BY `id` ASC";
 //$sql4= "SELECT * FROM `Todo` WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
 //$sql4= "SELECT * FROM `Todo` ORDER BY 'duedateandtime' ASC WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
 $query4 = mysqli_query($conn,$sql4);
