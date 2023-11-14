@@ -29,8 +29,8 @@ $query3 = mysqli_query($conn,$sql3);
 $result3 = mysqli_fetch_assoc($query3);
 $resultstring3 = $result3['userlastname'];
 
-$pokemon = $_SESSION["pokename"];
-$sql4="SELECT * FROM `pokemon` WHERE  ORDER BY `id` ASC";
+
+$sql4="SELECT * FROM `Todo` WHERE `userfirstname` ='$resultstring2' AND `userlastname`='$resultstring3' ORDER BY `duedateandtime` ASC";
 //$sql4= "SELECT * FROM `Todo` WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
 //$sql4= "SELECT * FROM `Todo` ORDER BY 'duedateandtime' ASC WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
 $query4 = mysqli_query($conn,$sql4);
@@ -74,7 +74,7 @@ $query4 = mysqli_query($conn,$sql4);
 $result = mysqli_query($conn, $sql4); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
 echo "<table border='1' style=background-color:black>";
-echo"<tr style=background-color:lime><th>itemID</th><th>First name </th> <th>Last name</th> <th>Due date and time</th> <th>Title</th> <th> description</th></tr>";
+echo"<tr style=background-color:lime><th>PokemonID</th><th>Pokemon Name </th> <th>Species ID</th> <th>Height</th> <th>Weight</th> <th>Base Experience</th> <th>Order</th> <th>Is Default</th></tr>";
 while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
     echo "<tr style=background-color:white>";
     foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
@@ -146,4 +146,3 @@ echo "</table>";
 </body>
 
 </html>
-
