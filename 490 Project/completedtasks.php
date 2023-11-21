@@ -17,7 +17,7 @@
 session_start();
 $servername = "sql1.njit.edu";// you need to put your assigned server name
 $username = "dsg2";// your ucid
-$password = "Thund3rStruck!";// database password
+$password = "3aWorldisUltimat3!";// database password
 $dbname = "dsg2"; // your ucid is your database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
