@@ -41,15 +41,16 @@ $resultstring3 = $result3['userlastname'];
     <a class="active" href="testmain.php">Home</a>
     <a href="Todo.php">Team-Builder</a>
     <a href="completedtasks.php">Created Teams</a>
-    <a href="wantout.php">Logout</a>
+    <a href="wantout.php">News</a>
+    <a href="wantout.php">Custom</a>
 </div>
  <p style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </p>
 
-<h1 class="Center"><u>Hello and welcome to the world of Pokemon.</u></h3>
+<h1 class="Center"><u>Hello and welcome to the world of Dokkan.</u></h3>
 
-<scan class="center3"><img src="https://snag.gy/CN1vH.jpg" class="shrink"></img></scan>
+<scan class="center3"><img src="https://play.google.com/store/apps/details?id=com.bandainamcogames.dbzdokkanww&hl=en_US" class="shrink"></img></scan>
 
-<p class="center2"> Hello there! Welcome to the world of Pokemon! My name is Oak! People call me the Pokemon professor! This world is inhabited by creatures called Pokemon! For some people, pokemon are pets. others use them for fights. Myself...I study Pokemon as a profession. Here on this website, you will be able to check out the wonderful world of Pokemon in Kanto! </p>
+<p class="center2"> Hello there! Welcome to the world of Dokkan! This website is dedicated to Bandai Namco’s hit mobile game Dragonball Z: Dokkan Battle. Dragon Ball Z: Dokkan Battle is a free-to-play mobile game based on the Dragon Ball anime franchise. It is a puzzle RPG game where you can collect characters from the hit anime through a Gacha system and use them to defeat your enemies! On this website, you will be able to build teams based on certain specs, keep up with news of events, and even create custom Dokkan battle cards to share with others! Click one of the tabs above to get started! Good luck Patrollers! </p>
 
 
 </body>
