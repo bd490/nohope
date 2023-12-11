@@ -59,6 +59,7 @@ $query4 = mysqli_query($conn,$sql4);
     <a href="completedtasks.php">Created Teams</a>
     <a href="wantout.html">News</a>
     <a href="wantout.html">Custom</a>
+    <a href="wantout.html">Signout</a>
 </div>
 
 <body>
