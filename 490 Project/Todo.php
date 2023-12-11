@@ -57,8 +57,8 @@ $query4 = mysqli_query($conn,$sql4);
      <a class="active" href="testmain.php">Home</a>
     <a href="Todo.php">Team-Builder</a>
     <a href="completedtasks.php">Created Teams</a>
-    <a href="wantout.php">News</a>
-    <a href="wantout.php">Custom</a>
+    <a href="wantout.html">News</a>
+    <a href="wantout.html">Custom</a>
 </div>
 
 <body>
@@ -75,7 +75,7 @@ $query4 = mysqli_query($conn,$sql4);
 $result = mysqli_query($conn, $sql4); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
 echo "<table border='1' style=background-color:black>";
-echo"<tr style=background-color:lime><th>PokemonID</th><th>Pokemon Name </th> <th>Species ID</th> <th>Height</th> <th>Weight</th> <th>Base Experience</th> <th>Order</th> <th>Is Default</th></tr>";
+echo"<center><tr style=background-color:lime><th>Unit Name</th> <th>Rarity</th> <th>Class</th> <th>Type</th> <th>GLB Release</th> <th>JPN Release</th> <th>GLB EZA Release</th> <th>JPN EZA Release</th> <th>GLB EZA</th> <th>JPN EZA</th> <th>HP 55%</th> <th>ATK 55%</th> <th>DEF 55%</th> <th>HP 100%</th> <th>ATK 100%</th> <th>DEF 100%</th> <th>HP 55% EZA</th> <th>ATK 55% EZA</th> <th>DEF 55% EZA</th> <th>HP 100% EZA</th> <th>ATK 100 EZA%</th> <th>DEF 100% EZA</th> <th>Categories</th> <th>ID</th> <th>URL</th> </tr></center>";
 while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
     echo "<tr style=background-color:white>";
     foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
