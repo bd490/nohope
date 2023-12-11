@@ -46,10 +46,12 @@ $query4 = mysqli_query($conn,$sql4);
 
 
 <div class="topnav">
-    <a class="active" href="testmain.php">Home</a>
-    <a href="Todo.php">To-do Tasks</a>
-    <a href="completedtasks.php">Completed Tasks</a>
-    <a href="wantout.php">Signout</a>
+     <a class="active" href="testmain.php">Home</a>
+    <a href="Todo.php">Team-Builder</a>
+    <a href="completedtasks.php">Created Teams</a>
+    <a href="wantout.html">News</a>
+    <a href="wantout.html">Custom</a>
+    <a href="wantout.html">Signout</a>
 </div>
 <h1 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h1>
 
