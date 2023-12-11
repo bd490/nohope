@@ -38,11 +38,12 @@ $resultstring3 = $result3['userlastname'];
 
 
 <div class="topnav">
-    <a class="active" href="testmain.php">Home</a>
+     <a class="active" href="testmain.php">Home</a>
     <a href="Todo.php">Team-Builder</a>
     <a href="completedtasks.php">Created Teams</a>
-    <a href="wantout.php">News</a>
-    <a href="wantout.php">Custom</a>
+    <a href="wantout.html">News</a>
+    <a href="wantout.html">Custom</a>
+    <a href="wantout.html">Signout</a>
 </div>
  <p style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </p>
 
