@@ -54,17 +54,18 @@ $query4 = mysqli_query($conn,$sql4);
 
 
 <div class="topnav">
-    <a class="active" href="testmain.php">Home</a>
-    <a href="Todo.php">To-do Tasks</a>
-    <a href="completedtasks.php">Completed Tasks</a>
-    <a href="wantout.php">Signout</a>
+     <a class="active" href="testmain.php">Home</a>
+    <a href="Todo.php">Team-Builder</a>
+    <a href="completedtasks.php">Created Teams</a>
+    <a href="wantout.php">News</a>
+    <a href="wantout.php">Custom</a>
 </div>
 
 <body>
 
 <h1 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h1>
 
-<h2> This is what you have to do</h2>
+<h2> This is a list of characters</h2>
 
 
 <br>
