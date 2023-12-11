@@ -48,7 +48,7 @@ $resultstring3 = $result3['userlastname'];
 
 <h1 class="Center"><u>Hello and welcome to the world of Dokkan.</u></h3>
 
-<scan class="center3"><img src="https://play.google.com/store/apps/details?id=com.bandainamcogames.dbzdokkanww&hl=en_US" class="shrink"></img></scan>
+<scan class="center3"><img src="/var/www/nohope/dokkan.jpg" class="shrink"></img></scan>
 
 <p class="center2"> Hello there! Welcome to the world of Dokkan! This website is dedicated to Bandai Namco’s hit mobile game Dragonball Z: Dokkan Battle. Dragon Ball Z: Dokkan Battle is a free-to-play mobile game based on the Dragon Ball anime franchise. It is a puzzle RPG game where you can collect characters from the hit anime through a Gacha system and use them to defeat your enemies! On this website, you will be able to build teams based on certain specs, keep up with news of events, and even create custom Dokkan battle cards to share with others! Click one of the tabs above to get started! Good luck Patrollers! </p>
 
