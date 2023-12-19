@@ -28,7 +28,7 @@ $query3 = mysqli_query($conn,$sql3);
 $result3 = mysqli_fetch_assoc($query3);
 $resultstring3 = $result3['userlastname'];
 
-
+$teamname = $_POST['teamname'];
 $image = $_POST['image'];
 $name = $_POST['name'];
 $rarity= $_POST['rarity'];
@@ -39,8 +39,8 @@ $type= $_POST['type'];
 
 
 
-$sql = "INSERT INTO custom (image,name,rarity,class,type) VALUES
-( '$image','$name','$rarity', '$class','$type')";
+$sql = "INSERT INTO custom (team_name,image,name,rarity,class,type) VALUES
+( '$teamname', '$image','$name','$rarity', '$class','$type')";
 
 
 $rs = mysqli_query($conn, $sql);
@@ -55,4 +55,3 @@ else{
 echo "somethings wrong";
 }
 ?>
-
