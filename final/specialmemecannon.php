@@ -29,7 +29,7 @@ $result3 = mysqli_fetch_assoc($query3);
 $resultstring3 = $result3['userlastname'];
 
 
-
+$teamname = $_POST['teamname'];
 $name = $_POST['name'];
 $rarity= $_POST['rarity'];
 $class = $_POST['class'];
@@ -39,8 +39,8 @@ $type= $_POST['type'];
 
 
 
-$sql = "INSERT INTO builtteams (name,rarity,class,type) VALUES
-( '$name','$rarity', '$class','$type')";
+$sql = "INSERT INTO builtteams (teamname, name,rarity,class,type) VALUES
+( '$teamname','$name','$rarity', '$class','$type')";
 
 
 $rs = mysqli_query($conn, $sql);
@@ -48,11 +48,10 @@ $rs = mysqli_query($conn, $sql);
 
 if($rs){
 
-header("Location: Todo.php");
+header("Location: builder.php");
 
 }
 else{
 echo "somethings wrong";
 }
 ?>
-
