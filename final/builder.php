@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Things To Do</title>
+    <title>Team Builder</title>
     <link href="signupstyle.css" rel="stylesheet">
 </head>
 <!-- php to acquire variables-->
@@ -58,8 +58,9 @@ $query4 = mysqli_query($conn,$sql4);
     <a href="Todo.php">List of Units</a>
     <a href="builder.php">Team-Builder</a>
     <a href="createdteams.php">Created Teams</a>
-    <a href="wantout.html">News</a>
-    <a href="wantout.html">Custom</a>
+    <a href="news.php">News</a>
+    <a href="custom.php">Custom</a>
+    <a href="ranking.php">Weekly Ranking</a>
     <a href="wantout.html">Signout</a>
 </div>
 
@@ -79,26 +80,30 @@ $query4 = mysqli_query($conn,$sql4);
 <h3>Team Builder</h3>
 
 <form action="specialmemecannon.php" method="post">
+	Name of team: <br>
+        <input type="text" value="" name="teamname"><br>
 	Name of unit (Please Choose Same Name as List): <br>
         <input type="text" value="" id="c" name="name"><br>
         <label for="rarity">Choose a Rarity:</label>
         <select id="rarity" name="rarity">
-  	  <option value="ssr">SSR</option>
-  	  <option value="ur">UR</option>
-  	  <option value="lr">LR</option>
+          <option value="R">R</option>
+          <option value="SR">SR</option>
+  	  <option value="SSR">SSR</option>
+  	  <option value="UR">UR</option>
+  	  <option value="LR">LR</option>
  	 </select><br>
         <label for="class">Choose a Class:</label>
         <select id="class" name="class">
-  	  <option value="super">SUPER</option>
-  	  <option value="extreme">EXTREME</option>
+  	  <option value="SUPER">SUPER</option>
+  	  <option value="EXTREME">EXTREME</option>
  	 </select><br>
  	 <label for="type">Choose a type:</label>
         <select id="type" name="type">
-  	  <option value="str">STR</option>
-  	  <option value="agl">AGL</option>
-  	  <option value="phy">PHY</option>
-  	  <option value="int">INT</option>
-  	  <option value="teq">TEQ</option>
+  	  <option value="STR">STR</option>
+  	  <option value="AGL">AGL</option>
+  	  <option value="PHY">PHY</option>
+  	  <option value="INT">INT</option>
+  	  <option value="TEQ">TEQ</option>
  	 </select><br>
         <input type="submit" value="new"><br>
     </form>
