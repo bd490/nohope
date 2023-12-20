@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Things To Do</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Character List</title>
     <link href="signupstyle.css" rel="stylesheet">
 </head>
 <!-- php to acquire variables-->
@@ -58,18 +61,45 @@ $query4 = mysqli_query($conn,$sql4);
     <a href="Todo.php">List of Units</a>
     <a href="builder.php">Team-Builder</a>
     <a href="createdteams.php">Created Teams</a>
-    <a href="wantout.html">News</a>
-    <a href="wantout.html">Custom</a>
+    <a href="news.php">News</a>
+    <a href="custom.php">Custom</a>
+    <a href="ranking.php">Weekly Ranking</a>
     <a href="wantout.html">Signout</a>
 </div>
 
 <body>
 
-<h1 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h1>
+<h4 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h4>
 
-<h2> This is a list of characters</h2>
+<h2><center> This is a list of characters</center></h2>
 
+<h3>Search Characters</h3>
 
+<form action="search.php" method="post">
+        <label for="rarity">Choose a Rarity:</label>
+        <select id="rarity" name="rarity">
+          <option value="R">R</option>
+          <option value="SR">SR</option>
+  	  <option value="SSR">SSR</option>
+  	  <option value="UR">UR</option>
+  	  <option value="LR">LR</option>
+ 	 </select><br>
+        <label for="class">Choose a Class:</label>
+        <select id="class" name="class">
+  	  <option value="SUPER">SUPER</option>
+  	  <option value="EXTREME">EXTREME</option>
+ 	 </select><br>
+ 	 <label for="type">Choose a type:</label>
+        <select id="type" name="type">
+  	  <option value="STR">STR</option>
+  	  <option value="AGL">AGL</option>
+  	  <option value="PHY">PHY</option>
+  	  <option value="INT">INT</option>
+  	  <option value="TEQ">TEQ</option>
+ 	 </select><br>
+        <input type="submit" value="new"><br>
+    </form>
+<br>
 <br>
 <?php
 
@@ -88,63 +118,8 @@ echo "</table>";
 
 ?>
 </div>
-<br>
 
-<h3>New To-Do</h3>
-<form action="specialmemecannon.php" method="post">
-        Due date and time: <br>
-        <input type="text" value="" id="c" name="duedate"><br>
-        title: <br>
-        <input type="text" value="" id="d" name="title"><br>
-        description:<br>
-        <input type="text" value="" id="e" name="description" maxlength="144"><br>
-        <input type="submit" value="new"><br>
-    </form>
-<br>
-
-<hr>
-
-
-
-<h3>Update</h3>
-<form action="update.php" method="post">
-        Which task are you updating (Please enter it's itemID):<br>
-        <input type="text" value="" id="c" name="userID"><br>
-        what are you updating: <br>
-        <select id="cats" name="cats" size="1"><br>
-        <option value = "duedateandtime"> Due Date and Time </option>
-        <option value = "title"> title </option>
-        <option value = "description"> Description </option>
-        </select><br>
-        please enter the modified data:<br>
-        <input type ="text" value="" id="c" name="changenow"><br>
-        <input type="submit" value="edit"><br>
-    </form>
-
-<br>
-
-<hr>
-
-<h3>Delete</h3>
-<form action="delete.php" method="post">
-    Which task are you deleting?(enter ItemID):<br>
-    <input type="text" value="" id="c" name="userID"><br>
-    <input type="submit" value="delete"><br>
-</form>
-
-
-<br>
-
-<hr>
-
-<h3>Check Off</h3>
-<form action="checkoff.php" method="post">
-    Which task have you completed(enter ItemID):<br>
-    <input type="text" value="" id="c" name="userID"><br>
-    <input type="submit" value="complete"><br>
-</form>
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
