@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Things To Do</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>News</title>
     <link href="signupstyle.css" rel="stylesheet">
 </head>
 <!-- php to acquire variables-->
@@ -59,15 +61,16 @@ $query4 = mysqli_query($conn,$sql4);
     <a href="builder.php">Team-Builder</a>
     <a href="createdteams.php">Created Teams</a>
     <a href="news.php">News</a>
-    <a href="wantout.html">Custom</a>
+    <a href="custom.php">Custom</a>
+    <a href="ranking.php">Weekly Ranking</a>
     <a href="wantout.html">Signout</a>
 </div>
 
 <body>
 
-<h1 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h1>
+<h4 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h4>
 
-<h2> This is a list of events</h2>
+<h2><center> This is a list of events</center></h2>
 
 
 <br>
@@ -89,7 +92,7 @@ echo "</table>";
 ?>
 </div>
 <br>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
