@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <title>Team Builder</title>
     <link href="signupstyle.css" rel="stylesheet">
 </head>
@@ -66,9 +69,9 @@ $query4 = mysqli_query($conn,$sql4);
 
 <body>
 
-<h1 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h1>
+<h4 style="color:darkblue"><?php echo $resultstring2; ?>     <?php echo $resultstring3; ?>  </h4>
 
-<h2> This is a list of characters</h2>
+<h2><center> This is a list of characters</center></h2>
 
 
 <br>
@@ -86,9 +89,6 @@ $query4 = mysqli_query($conn,$sql4);
         <input type="text" value="" id="c" name="name"><br>
         <label for="rarity">Choose a Rarity:</label>
         <select id="rarity" name="rarity">
-          <option value="R">R</option>
-          <option value="SR">SR</option>
-  	  <option value="SSR">SSR</option>
   	  <option value="UR">UR</option>
   	  <option value="LR">LR</option>
  	 </select><br>
@@ -109,7 +109,7 @@ $query4 = mysqli_query($conn,$sql4);
     </form>
 <br>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
