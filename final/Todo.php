@@ -78,9 +78,6 @@ $query4 = mysqli_query($conn,$sql4);
 <form action="search.php" method="post">
         <label for="rarity">Choose a Rarity:</label>
         <select id="rarity" name="rarity">
-          <option value="R">R</option>
-          <option value="SR">SR</option>
-  	  <option value="SSR">SSR</option>
   	  <option value="UR">UR</option>
   	  <option value="LR">LR</option>
  	 </select><br>
