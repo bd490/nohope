@@ -84,11 +84,19 @@ $query4 = mysqli_query($conn,$sql4);
   	  <option value="UR">UR</option>
   	  <option value="LR">LR</option>
  	 </select><br>
+        <input type="submit" value="Search"><br>
+    </form>
+<br>
+<form action="search2.php" method="post">
         <label for="class">Choose a Class:</label>
         <select id="class" name="class">
-  	  <option value="SUPER">SUPER</option>
-  	  <option value="EXTREME">EXTREME</option>
+  	  <option value="Super">SUPER</option>
+  	  <option value="Extreme">EXTREME</option>
  	 </select><br>
+        <input type="submit" value="Search"><br>
+    </form>
+<br>
+<form action="search3.php" method="post">
  	 <label for="type">Choose a type:</label>
         <select id="type" name="type">
   	  <option value="STR">STR</option>
@@ -97,9 +105,8 @@ $query4 = mysqli_query($conn,$sql4);
   	  <option value="INT">INT</option>
   	  <option value="TEQ">TEQ</option>
  	 </select><br>
-        <input type="submit" value="new"><br>
+ 	 <input type="submit" value="Search"><br>
     </form>
-<br>
 <br>
 <?php
 
