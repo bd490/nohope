@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Things To Do</title>
+    <title>Weekly Ranking</title>
     <link href="signupstyle.css" rel="stylesheet">
 </head>
 <!-- php to acquire variables-->
@@ -30,10 +30,10 @@ $result3 = mysqli_fetch_assoc($query3);
 $resultstring3 = $result3['userlastname'];
 
 
-$sql4="SELECT * FROM `dokkan` ORDER BY `id` ASC";
+//$sql4="SELECT * FROM `dokkan` ORDER BY `id` ASC";
 //$sql4= "SELECT * FROM `Todo` WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
 //$sql4= "SELECT * FROM `Todo` ORDER BY 'duedateandtime' ASC WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
-$query4 = mysqli_query($conn,$sql4);
+//$query4 = mysqli_query($conn,$sql4);
 //$result4 = mysqli_fetch_assoc($query4);
 //$resultstring4 = $result4['userfirstname'];
 //$endit = $result4['userlastname'];
@@ -76,11 +76,64 @@ $query4 = mysqli_query($conn,$sql4);
 </div>
 
 <?php
+//$result = mysqli_query($conn, $sql4);
+//echo "<table border='1' style=background-color:black>";
+//echo"<center><tr style=background-color:lime><th>Unit Name</th> <th>Rarity</th> <th>Class</th> <th>Type</th> <th>GLB Release</th> <th>JPN Release</th> <th>GLB EZA Release</th> <th>JPN EZA Release</th> <th>GLB EZA</th> <th>JPN EZA</th> <th>HP 55%</th> <th>ATK 55%</th> <th>DEF 55%</th> <th>HP 100%</th> <th>ATK 100%</th> <th>DEF 100%</th> <th>HP 55% EZA</th> <th>ATK 55% EZA</th> <th>DEF 55% EZA</th> <th>HP 100% EZA</th> <th>ATK 100 EZA%</th> <th>DEF 100% EZA</th> <th>Categories</th> <th>ID</th> <th>URL</th> </tr></center>";
+$sql5="SELECT * FROM `dokkan` WHERE `id`='11708'";
+$query5 = mysqli_query($conn,$sql5);
+$sql6="SELECT * FROM `dokkan` WHERE `id`='11334'";
+$query6 = mysqli_query($conn,$sql6);
+//echo $result5;
+//echo $result6;
+//echo "</table>";
+
+echo "<br>";
+echo "<table border='2' style=background-color:black>";
+echo"<center><tr style=background-color:lime><th>Unit Name</th> <th>Rarity</th> <th>Class</th> <th>Type</th> <th>GLB Release</th> <th>JPN Release</th> <th>GLB EZA Release</th> <th>JPN EZA Release</th> <th>GLB EZA</th> <th>JPN EZA</th> <th>HP 55%</th> <th>ATK 55%</th> <th>DEF 55%</th> <th>HP 100%</th> <th>ATK 100%</th> <th>DEF 100%</th> <th>HP 55% EZA</th> <th>ATK 55% EZA</th> <th>DEF 55% EZA</th> <th>HP 100% EZA</th> <th>ATK 100 EZA%</th> <th>DEF 100% EZA</th> <th>Categories</th> <th>ID</th> <th>URL</th> </tr></center>";
+while ($row = mysqli_fetch_assoc($query5)) { // Important line !!! Check summary get row on array ..
+    echo "<tr style=background-color:white>";
+    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function.
+    }
+    echo "</tr>";
+}
+echo "</table>";
+
+echo "<br>";
+echo "<center> <h1> VS </h1> </center>";
+echo "<table border='2' style=background-color:black>";
+echo"<center><tr style=background-color:lime><th>Unit Name</th> <th>Rarity</th> <th>Class</th> <th>Type</th> <th>GLB Release</th> <th>JPN Release</th> <th>GLB EZA Release</th> <th>JPN EZA Release</th> <th>GLB EZA</th> <th>JPN EZA</th> <th>HP 55%</th> <th>ATK 55%</th> <th>DEF 55%</th> <th>HP 100%</th> <th>ATK 100%</th> <th>DEF 100%</th> <th>HP 55% EZA</th> <th>ATK 55% EZA</th> <th>DEF 55% EZA</th> <th>HP 100% EZA</th> <th>ATK 100 EZA%</th> <th>DEF 100% EZA</th> <th>Categories</th> <th>ID</th> <th>URL</th> </tr></center>";
+while ($row = mysqli_fetch_assoc($query6)) { // Important line !!! Check summary get row on array ..
+    echo "<tr style=background-color:white>";
+    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function.
+    }
+    echo "</tr>";
+}
+echo "</table>";
+
+?>
+<br><br><br>
+<h4><center>Who is your favorite character?</center></h4>
+
+<form action="specialmemecannon3.php" method="post">
+	  Your username: <br>
+        <input type="text" value="" name="user"><br>
+	  <select id="voting" name="voting">
+          <option value="1">1 - Resilient Will to Protect the Future Trunks (Teen) (Future)</option>
+          <option value="2">2 - Resolute Execution Cooler (Final Form)</option>
+        <input type="submit" value="Vote"><br>
+    </form>
+ <?php  
+ $sql4="SELECT * FROM `voting`";
+//$sql4= "SELECT * FROM `Todo` WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
+//$sql4= "SELECT * FROM `Todo` ORDER BY 'duedateandtime' ASC WHERE `userfirstname`='$resultstring2' AND `userlastname`='$resultstring3'";
+$query4 = mysqli_query($conn,$sql4);
 
 $result = mysqli_query($conn, $sql4); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
 echo "<center><table border='1' style=background-color:black>";
-echo"<center><tr style=background-color:lime> <th>Image</th> <th>Unit Name</th> <th>Rarity</th> <th>Class</th> <th>Type</th></tr></center>";
+echo"<center><tr style=background-color:lime><th>User Name</th> <th>Unit Voted</th></tr></center>";
 while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
     echo "<tr style=background-color:white>";
     foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
@@ -90,43 +143,11 @@ while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary
 }
 echo "</table></center>";
 
-
 ?>
-
 <br>
 
 <hr>
 
-<h3>Team Builder</h3>
-
-<form action="specialmemecannon2.php" method="post">
-	<label for="myfile">Select a file:</label>
-  <input type="file" id="myfile" name="image"><br><br>
-	Name of unit (Please Choose Same Name as List): <br>
-        <input type="text" value="" id="c" name="name"><br>
-        <label for="rarity">Choose a Rarity:</label>
-        <select id="rarity" name="rarity">
-          <option value="ssr">R</option>
-          <option value="ssr">SR</option>
-  	  <option value="ssr">SSR</option>
-  	  <option value="ur">UR</option>
-  	  <option value="lr">LR</option>
- 	 </select><br>
-        <label for="class">Choose a Class:</label>
-        <select id="class" name="class">
-  	  <option value="super">SUPER</option>
-  	  <option value="extreme">EXTREME</option>
- 	 </select><br>
- 	 <label for="type">Choose a type:</label>
-        <select id="type" name="type">
-  	  <option value="str">STR</option>
-  	  <option value="agl">AGL</option>
-  	  <option value="phy">PHY</option>
-  	  <option value="int">INT</option>
-  	  <option value="teq">TEQ</option>
- 	 </select><br>
-        <input type="submit" value="new"><br>
-    </form>
 <br>
 
 
